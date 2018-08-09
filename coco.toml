@@ -1,0 +1,67 @@
+[Eth]
+NetworkId = 49344
+SyncMode = "full"
+LightPeers = 100
+DatabaseCache = 768
+GasPrice = 0
+EnablePreimageRecording = false
+
+[Eth.Ethash]
+CacheDir = "ethash"
+CachesInMem = 2
+CachesOnDisk = 3
+DatasetDir = "/home/cocolian/eth/ethash"
+DatasetsInMem = 1
+DatasetsOnDisk = 2
+PowMode = 0
+
+[Eth.TxPool]
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 4096
+AccountQueue = 64
+GlobalQueue = 1024
+Lifetime = 10800000000000
+
+[Eth.GPO]
+Blocks = 20
+Percentile = 60
+
+[Shh]
+MaxMessageSize = 1048576
+MinimumAcceptedPOW = 2e-01
+
+[Node]
+DataDir = "/home/cocolian/eth/data"
+IPCPath = "geth.ipc"
+HTTPHost = "0.0.0.0"
+HTTPPort = 3088
+HTTPCors = ["*"]
+HTTPVirtualHosts = ["localhost"]
+HTTPModules = ["personal", "db", "eth", "net", "web3", "txpool", "miner"]
+WSPort = 3046
+WSModules = ["net", "web3", "eth", "shh"]
+
+[Node.P2P]
+MaxPeers = 25
+NoDiscovery = true
+BootstrapNodes = ["enode://6d03fa7c6a0a60effc39df0c0d21d1d16b9a9a4a651b8cc48ea95ea36fe94072ce1fd7baf724b75ed0ca76b657ffb8b25515a33747a50241945eb75b8a90a79e@43.247.91.212:3888"]
+BootstrapNodesV5 = ["enode://6d03fa7c6a0a60effc39df0c0d21d1d16b9a9a4a651b8cc48ea95ea36fe94072ce1fd7baf724b75ed0ca76b657ffb8b25515a33747a50241945eb75b8a90a79e@43.247.91.212:3888"]
+StaticNodes = ["enode://85f01799a4926a38a4fef22d6b5b1b6b53f104ecb0701e1f69446b8dee741fee3302b1e66bde88f6be1eb1a19bdea85e78a839d3dd0c26dfc5f98cde464397db@43.247.91.212:3084",
+"enode://6b4ca8a4924b0d56381d3d163881b7e59a931b44f698d178ffda16897fe02b9e399710d837d61b6e0be884f6b1a6dbafe77ac88d5715fcae00c2cb867a21217e@123.206.83.152:3084",
+"enode://ca54e002e9df899a2b2d22c322da7dd73153a3a80777d565af00cb536a9bd21e68b2a6f21a9d595cb40d91bcd2d305ea35e4550fa35d85d817dd2bec65d74e30@123.207.166.122:3084"]
+TrustedNodes = ["enode://85f01799a4926a38a4fef22d6b5b1b6b53f104ecb0701e1f69446b8dee741fee3302b1e66bde88f6be1eb1a19bdea85e78a839d3dd0c26dfc5f98cde464397db@43.247.91.212:3084",
+"enode://6b4ca8a4924b0d56381d3d163881b7e59a931b44f698d178ffda16897fe02b9e399710d837d61b6e0be884f6b1a6dbafe77ac88d5715fcae00c2cb867a21217e@123.206.83.152:3084",
+"enode://ca54e002e9df899a2b2d22c322da7dd73153a3a80777d565af00cb536a9bd21e68b2a6f21a9d595cb40d91bcd2d305ea35e4550fa35d85d817dd2bec65d74e30@123.207.166.122:3084"]
+
+ListenAddr = ":3084"
+EnableMsgEvents = false
+
+[Dashboard]
+Host = "localhost"
+Port = 8080
+Refresh = 5000000000
