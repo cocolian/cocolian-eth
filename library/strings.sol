@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-contract Strings {
+library strings {
 
     function parseAddr(string _a) internal pure returns (address){
         bytes memory tmp = bytes(_a);
